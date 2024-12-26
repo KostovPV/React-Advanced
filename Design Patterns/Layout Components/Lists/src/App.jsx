@@ -1,3 +1,7 @@
+import { LargeAuthorListItems } from "./components/authors/LargeListItems";
+import { SmallAuthorListItems } from "./components/authors/SmalListItems";
+import { Regular } from "./components/lists/Regular";
+import { authors } from "./data/authors";
 
 
 function App() {
@@ -5,10 +9,8 @@ function App() {
 
   return (
     <>
-      <div>
-        Lists
-      </div>
-
+      <Regular items={authors} sourceName={"author"} ItemComponent={SmallAuthorListItems}/>
+      <Regular items={authors} sourceName={"author"} ItemComponent={LargeAuthorListItems}/>
     </>
   )
 }
